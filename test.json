@@ -1,0 +1,26 @@
+{
+  "aac": "25-54-66",
+  "appId": "c2bb95ba07eaa233",
+  "billes": [
+    {
+      "barcode": "6464646",
+      "emplacement": "6192430019357",
+      "num_troncon": "svvssh"
+    },
+    {
+      "barcode": "6464464",
+      "emplacement": "sgsbs",
+      "num_troncon": "bdbd"
+    },
+    {
+      "barcode": "6464",
+      "emplacement": "sgsbs",
+      "num_troncon": "vdbs"
+    }
+  ],
+  "creation_date": "12/10/2021",
+  "name": "djdndjs",
+  "sync": true,
+  "sync_date": "12/10/2021",
+  "type": "Inventaire"
+}

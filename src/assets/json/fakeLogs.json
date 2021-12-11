@@ -1,0 +1,362 @@
+[
+    {
+        "parcPrepFileId": 554560,
+        "creationDate": "2020-06-05T01:51:51.100Z",
+        "barCode": 229244,
+        "index": 5340,
+        "id": "9998/9951",
+        "gasoline": {
+            "name": "Windler",
+            "code": 19
+        },
+        "dgb": 477,
+        "dpb": 561,
+        "diameter": 324,
+        "volume": 592,
+        "quality": 8,
+        "status": "non",
+        "statusPattern": "ut ipsam"
+    },
+    {
+        "parcPrepFileId": 554560,
+        "creationDate": "2020-10-24T11:54:24.586Z",
+        "barCode": 2223158,
+        "index": 4475,
+        "id": "4582/528",
+        "gasoline": {
+            "name": "Kirlin",
+            "code": 28
+        },
+        "dgb": 192,
+        "dpb": 529,
+        "diameter": 579,
+        "volume": 262,
+        "quality": 3,
+        "status": "quasi",
+        "statusPattern": "facere cum"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-06-25T02:01:15.492Z",
+        "barCode": 5881043,
+        "index": 1174,
+        "id": "5930/7347",
+        "gasoline": {
+            "name": "Greenholt",
+            "code": 3
+        },
+        "dgb": 279,
+        "dpb": 265,
+        "diameter": 588,
+        "volume": 64,
+        "quality": 2,
+        "status": "totam",
+        "statusPattern": "distinctio dolores"
+    },
+    {
+        "parcPrepFileId": 763546,
+        "creationDate": "2021-01-03T04:20:49.816Z",
+        "barCode": 6112819,
+        "index": 5770,
+        "id": "7282/6939",
+        "gasoline": {
+            "name": "Osinski",
+            "code": 5
+        },
+        "dgb": 346,
+        "dpb": 786,
+        "diameter": 748,
+        "volume": 853,
+        "quality": 4,
+        "status": "dolorem",
+        "statusPattern": "omnis quos"
+    },
+    {
+        "parcPrepFileId": 38525,
+        "creationDate": "2020-06-01T02:53:15.520Z",
+        "barCode": 6469857,
+        "index": 4924,
+        "id": "3044/3098",
+        "gasoline": {
+            "name": "Wintheiser",
+            "code": 67
+        },
+        "dgb": 463,
+        "dpb": 489,
+        "diameter": 543,
+        "volume": 305,
+        "quality": 0,
+        "status": "perspiciatis",
+        "statusPattern": "optio tempora"
+    },
+    {
+        "parcPrepFileId": 554560,
+        "creationDate": "2020-12-09T13:06:31.023Z",
+        "barCode": 7984258,
+        "index": 502,
+        "id": "2646/4360",
+        "gasoline": {
+            "name": "Pouros",
+            "code": 51
+        },
+        "dgb": 342,
+        "dpb": 49,
+        "diameter": 280,
+        "volume": 616,
+        "quality": 3,
+        "status": "quas",
+        "statusPattern": "aliquam fugit"
+    },
+    {
+        "parcPrepFileId": 105956,
+        "creationDate": "2020-06-21T23:41:29.636Z",
+        "barCode": 9406621,
+        "index": 24,
+        "id": "5781/5339",
+        "gasoline": {
+            "name": "Leannon",
+            "code": 68
+        },
+        "dgb": 358,
+        "dpb": 627,
+        "diameter": 291,
+        "volume": 310,
+        "quality": 9,
+        "status": "voluptatum",
+        "statusPattern": "corporis sit"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-04-11T18:08:37.294Z",
+        "barCode": 2980673,
+        "index": 8253,
+        "id": "3073/4798",
+        "gasoline": {
+            "name": "Green",
+            "code": 8
+        },
+        "dgb": 660,
+        "dpb": 737,
+        "diameter": 954,
+        "volume": 734,
+        "quality": 7,
+        "status": "sapiente",
+        "statusPattern": "aut commodi"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-05-11T00:07:30.351Z",
+        "barCode": 96788,
+        "index": 2786,
+        "id": "2221/5147",
+        "gasoline": {
+            "name": "Runte",
+            "code": 33
+        },
+        "dgb": 469,
+        "dpb": 329,
+        "diameter": 898,
+        "volume": 367,
+        "quality": 3,
+        "status": "vitae",
+        "statusPattern": "explicabo consequatur"
+    },
+    {
+        "parcPrepFileId": 105956,
+        "creationDate": "2020-08-16T04:46:34.627Z",
+        "barCode": 7321464,
+        "index": 9498,
+        "id": "2964/6136",
+        "gasoline": {
+            "name": "Hauck",
+            "code": 63
+        },
+        "dgb": 402,
+        "dpb": 886,
+        "diameter": 944,
+        "volume": 623,
+        "quality": 8,
+        "status": "quasi",
+        "statusPattern": "id dolorem"
+    },
+    {
+        "parcPrepFileId": 105956,
+        "creationDate": "2020-09-15T06:41:25.975Z",
+        "barCode": 3343969,
+        "index": 5935,
+        "id": "9466/1593",
+        "gasoline": {
+            "name": "Jones",
+            "code": 7
+        },
+        "dgb": 994,
+        "dpb": 795,
+        "diameter": 205,
+        "volume": 175,
+        "quality": 9,
+        "status": "consectetur",
+        "statusPattern": "optio facere"
+    },
+    {
+        "parcPrepFileId": 554560,
+        "creationDate": "2020-11-29T01:10:00.291Z",
+        "barCode": 5844926,
+        "index": 1262,
+        "id": "3507/3490",
+        "gasoline": {
+            "name": "Zulauf",
+            "code": 28
+        },
+        "dgb": 741,
+        "dpb": 910,
+        "diameter": 672,
+        "volume": 434,
+        "quality": 2,
+        "status": "voluptatibus",
+        "statusPattern": "id voluptatibus"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-04-19T00:47:15.411Z",
+        "barCode": 4339011,
+        "index": 2470,
+        "id": "4022/4990",
+        "gasoline": {
+            "name": "O'Reilly",
+            "code": 4
+        },
+        "dgb": 743,
+        "dpb": 148,
+        "diameter": 967,
+        "volume": 405,
+        "quality": 1,
+        "status": "reiciendis",
+        "statusPattern": "nulla quia"
+    },
+    {
+        "parcPrepFileId": 554560,
+        "creationDate": "2020-03-01T19:55:33.613Z",
+        "barCode": 8681213,
+        "index": 7462,
+        "id": "2723/131",
+        "gasoline": {
+            "name": "Flatley",
+            "code": 53
+        },
+        "dgb": 512,
+        "dpb": 383,
+        "diameter": 620,
+        "volume": 705,
+        "quality": 1,
+        "status": "et",
+        "statusPattern": "est doloremque"
+    },
+    {
+        "parcPrepFileId": 763546,
+        "creationDate": "2020-06-24T19:32:37.502Z",
+        "barCode": 724527,
+        "index": 3166,
+        "id": "3506/4941",
+        "gasoline": {
+            "name": "Casper",
+            "code": 60
+        },
+        "dgb": 785,
+        "dpb": 66,
+        "diameter": 723,
+        "volume": 467,
+        "quality": 9,
+        "status": "beatae",
+        "statusPattern": "soluta dolores"
+    },
+    {
+        "parcPrepFileId": 105956,
+        "creationDate": "2020-04-14T12:14:56.863Z",
+        "barCode": 3756819,
+        "index": 4339,
+        "id": "7666/8535",
+        "gasoline": {
+            "name": "Gerlach",
+            "code": 67
+        },
+        "dgb": 589,
+        "dpb": 313,
+        "diameter": 104,
+        "volume": 248,
+        "quality": 3,
+        "status": "velit",
+        "statusPattern": "praesentium et"
+    },
+    {
+        "parcPrepFileId": 878269,
+        "creationDate": "2020-03-30T14:03:08.423Z",
+        "barCode": 8632811,
+        "index": 571,
+        "id": "9603/5257",
+        "gasoline": {
+            "name": "Stroman",
+            "code": 92
+        },
+        "dgb": 512,
+        "dpb": 754,
+        "diameter": 862,
+        "volume": 799,
+        "quality": 1,
+        "status": "ut",
+        "statusPattern": "molestiae beatae"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-02-29T14:29:04.014Z",
+        "barCode": 7740602,
+        "index": 3571,
+        "id": "8757/7855",
+        "gasoline": {
+            "name": "Stiedemann",
+            "code": 39
+        },
+        "dgb": 687,
+        "dpb": 988,
+        "diameter": 752,
+        "volume": 824,
+        "quality": 8,
+        "status": "illum",
+        "statusPattern": "quam iste"
+    },
+    {
+        "parcPrepFileId": 623104,
+        "creationDate": "2020-06-09T16:04:23.027Z",
+        "barCode": 8152513,
+        "index": 5334,
+        "id": "4373/2760",
+        "gasoline": {
+            "name": "Huel",
+            "code": 29
+        },
+        "dgb": 640,
+        "dpb": 909,
+        "diameter": 666,
+        "volume": 91,
+        "quality": 9,
+        "status": "enim",
+        "statusPattern": "aut ex"
+    },
+    {
+        "parcPrepFileId": 105956,
+        "creationDate": "2020-02-15T02:26:24.951Z",
+        "barCode": 1822896,
+        "index": 9495,
+        "id": "6610/4268",
+        "gasoline": {
+            "name": "Klocko",
+            "code": 56
+        },
+        "dgb": 309,
+        "dpb": 390,
+        "diameter": 962,
+        "volume": 636,
+        "quality": 3,
+        "status": "nobis",
+        "statusPattern": "dolor quibusdam"
+    }
+]

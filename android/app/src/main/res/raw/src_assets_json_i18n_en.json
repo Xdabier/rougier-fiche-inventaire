@@ -1,0 +1,206 @@
+{
+  "common": {
+    "home": "Home",
+    "parcPrep": "Parc prep",
+    "log": "Logs",
+    "settings": "Settings",
+    "id": "ID",
+    "logId": "Log ID",
+    "parcId": "Parc ID",
+    "prepFileId": "Prep form ID {{fileId}}",
+    "creationDate": "Created {{date}}",
+    "lastLogDate": "Last log {{date}}",
+    "logs": "Logs",
+    "logsNumber": "{{numLogs}} logs",
+    "addParcPrepFile": "Add parc prep form",
+    "editParcPrepFile": "Edit form",
+    "editLog": "Edit log",
+    "serverInfo": "Server information",
+    "addLog": "Add log",
+    "sync": "Synchronize",
+    "scanBarCode": "Scan bare-code",
+    "syncAll": "Synchronize all",
+    "synced": "Synchronized",
+    "dupErr": "Duplicate identifier!",
+    "fr": "French",
+    "en": "English",
+    "yes": "Yes",
+    "validate": "Confirm",
+    "no": "No",
+    "code": "Code: {{val}}",
+    "default": "Default",
+    "validErr": "Please make sure all the fields are valid.",
+    "requiredField": "This field is required"
+  },
+  "actionSheet": {
+    "ph": "Filter the list by name, ex: Jean-pierre "
+  },
+  "changeLanguageAlert": {
+    "title": "Language change",
+    "message": "do you really want to change the language ?"
+  },
+  "closeModalAlert": {
+    "title": "Are you sure ?",
+    "message": "Do you want to close without saving your form ?",
+    "message_code": "Do you want to close without scanning the code ? "
+  },
+  "homePage": {
+    "title": "Current parc preparation form"
+  },
+  "logsListPage": {
+    "title": "Parc logs",
+    "filterInputPh": "Start typing parc id...",
+    "noContent": "No added logs yet."
+  },
+  "parcPrep": {
+    "noContent": "You need to add parc preparation forms first."
+  },
+  "settings": {
+    "setServer": "Set server information",
+    "addGasoline": "Add gasoline",
+    "addCuber": "Add cuber",
+    "addSite": "Add site"
+  },
+  "modals": {
+    "aux": {
+      "title": "Add {{val}}",
+      "confirm": "Confirm {{val}} addition",
+      "succMsg": "{{val}} added successfully!",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "ph": "Enter {{val}} name"
+        },
+        "code": {
+          "label": "Code",
+          "ph": "Enter {{val}} code"
+        }
+      }
+    },
+    "cuber": {
+      "name": "cuber"
+    },
+    "site": {
+      "name": "site"
+    },
+    "gasoline": {
+      "name": "gasoline"
+    },
+    "logs": {
+      "confirm": "Confirm log addition",
+      "succMsg": "Log added successfully!",
+      "fields": {
+        "barCode": {
+          "label": "Bar code",
+          "ph": "Enter bar code"
+        },
+        "logging": {
+          "label": "Logging number",
+          "ph": "Enter logging number"
+        },
+        "index": {
+          "label": "Indexing number",
+          "ph": "Enter indexing number"
+        },
+        "id": {
+          "label": "Log number",
+          "ph": "logging number / indexing number"
+        },
+        "gasoline": {
+          "label": "Gasoline",
+          "ph": "Select gasoline"
+        },
+        "dgb": {
+          "label": "DGB",
+          "ph": "Enter DGB number"
+        },
+        "dpb": {
+          "label": "DPB",
+          "ph": "Enter DPB number"
+        },
+        "length": {
+          "label": "Length",
+          "ph": "Enter length value"
+        },
+        "diameterAvg": {
+          "label": "Average dm",
+          "ph": "( DGB + DPB ) / 2"
+        },
+        "volume": {
+          "label": "Volume",
+          "ph": "Volume formula"
+        },
+        "quality": {
+          "label": "Quality",
+          "ph": "Enter quality"
+        },
+        "status": {
+          "label": "Status",
+          "ph": "Enter status"
+        },
+        "patternStatus": {
+          "label": "Motif status",
+          "ph": "Enter pattern status"
+        }
+      }
+    },
+    "parcPrep": {
+      "confirm": "Confirm prep. form addition",
+      "succMsg": "Parc preparation form added successfully!",
+      "fields": {
+        "id": {
+          "label": "Form ID",
+          "ph": "ex: FICHE-4569",
+          "err": "The ID should be alpha-num and at least 3 characters."
+        },
+        "aac": {
+          "label": "AAC",
+          "ph": "ex: 23-26-95",
+          "err": "It should be following this pattern (one or two numbers)-(one or two numbers)-(one or two numbers)"
+        },
+        "cuber": {
+          "label": "Cuber",
+          "ph": "Select cuber"
+        },
+        "site": {
+          "label": "Site",
+          "ph": "Select site"
+        },
+        "date": {
+          "label": "Date",
+          "ph": "Please select date"
+        },
+        "parcAsDefault": {
+          "label": "Set this parc as default"
+        }
+      }
+    },
+    "server": {
+      "confirm": "Save new server info",
+      "succMsg": "Server info saved successfully!",
+      "fields": {
+        "url": {
+          "label": "URL",
+          "ph": "ex: https://example.com or http://12.125.236.23",
+          "err": "This should be a valid URL."
+        },
+        "port": {
+          "label": "PORT",
+          "ph": "ex: 8020 or 8095"
+        },
+        "username": {
+          "label": "User name",
+          "ph": "ex: testUser or testuser@gmail.com"
+        },
+        "password": {
+          "label": "Password",
+          "ph": "The server's password"
+        },
+        "db": {
+          "label": "Database name",
+          "ph": "Please enter the database name"
+        }
+      }
+    }
+  }
+}

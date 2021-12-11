@@ -1,0 +1,322 @@
+[
+    {
+        "id": 105956,
+        "aac": "87-82-22",
+        "cuber": {
+            "name": "Fadel",
+            "code": 14
+        },
+        "site": {
+            "name": "West Walkerland",
+            "code": 66
+        },
+        "allSynced": false,
+        "creationDate": "2020-03-15T21:44:29.092Z",
+        "logsNumber": 144,
+        "lastLogDate": "2020-02-19T08:06:20.836Z"
+    },
+    {
+        "id": 554560,
+        "aac": "57-65-52",
+        "cuber": {
+            "name": "Hayes",
+            "code": 66
+        },
+        "site": {
+            "name": "Kingstad",
+            "code": 25
+        },
+        "allSynced": true,
+        "creationDate": "2020-05-12T21:06:33.135Z",
+        "logsNumber": 150,
+        "lastLogDate": "2020-10-09T08:53:20.866Z"
+    },
+    {
+        "id": 878269,
+        "aac": "24-30-26",
+        "cuber": {
+            "name": "Gaylord",
+            "code": 92
+        },
+        "site": {
+            "name": "East Baronmouth",
+            "code": 48
+        },
+        "allSynced": true,
+        "creationDate": "2021-01-01T19:44:00.006Z",
+        "logsNumber": 235,
+        "lastLogDate": "2020-08-29T14:55:52.365Z"
+    },
+    {
+        "id": 623104,
+        "aac": "64-83-67",
+        "cuber": {
+            "name": "Jenkins",
+            "code": 53
+        },
+        "site": {
+            "name": "New Ashtyn",
+            "code": 97
+        },
+        "allSynced": false,
+        "creationDate": "2020-04-09T04:42:57.450Z",
+        "logsNumber": 191,
+        "lastLogDate": "2020-11-10T00:33:05.577Z"
+    },
+    {
+        "id": 367233,
+        "aac": "13-31-9",
+        "cuber": {
+            "name": "Denesik",
+            "code": 12
+        },
+        "site": {
+            "name": "Trantowfort",
+            "code": 5
+        },
+        "allSynced": false,
+        "creationDate": "2020-10-09T22:44:21.151Z",
+        "logsNumber": 98,
+        "lastLogDate": "2020-03-06T07:18:14.878Z"
+    },
+    {
+        "id": 763546,
+        "aac": "30-90-34",
+        "cuber": {
+            "name": "Skiles",
+            "code": 17
+        },
+        "site": {
+            "name": "New Neil",
+            "code": 14
+        },
+        "allSynced": true,
+        "creationDate": "2021-01-06T16:26:31.645Z",
+        "logsNumber": 95,
+        "lastLogDate": "2020-12-26T08:28:05.727Z"
+    },
+    {
+        "id": 38525,
+        "aac": "59-6-90",
+        "cuber": {
+            "name": "Strosin",
+            "code": 46
+        },
+        "site": {
+            "name": "Port Carlie",
+            "code": 35
+        },
+        "allSynced": true,
+        "creationDate": "2020-06-05T20:18:41.242Z",
+        "logsNumber": 142,
+        "lastLogDate": "2020-04-08T12:47:46.846Z"
+    },
+    {
+        "id": 702447,
+        "aac": "44-68-90",
+        "cuber": {
+            "name": "Schaden",
+            "code": 43
+        },
+        "site": {
+            "name": "East Janickland",
+            "code": 72
+        },
+        "allSynced": true,
+        "creationDate": "2020-10-06T15:35:32.421Z",
+        "logsNumber": 5,
+        "lastLogDate": "2021-01-10T16:28:15.195Z"
+    },
+    {
+        "id": 340615,
+        "aac": "40-49-54",
+        "cuber": {
+            "name": "Hilpert",
+            "code": 93
+        },
+        "site": {
+            "name": "Lynchstad",
+            "code": 71
+        },
+        "allSynced": true,
+        "creationDate": "2020-04-04T10:00:37.200Z",
+        "logsNumber": 61,
+        "lastLogDate": "2020-11-10T16:48:45.583Z"
+    },
+    {
+        "id": 939731,
+        "aac": "40-38-39",
+        "cuber": {
+            "name": "Haley",
+            "code": 97
+        },
+        "site": {
+            "name": "West Reneburgh",
+            "code": 20
+        },
+        "allSynced": true,
+        "creationDate": "2020-04-19T11:10:40.794Z",
+        "logsNumber": 79,
+        "lastLogDate": "2020-03-14T01:38:36.180Z"
+    },
+    {
+        "id": 609349,
+        "aac": "44-94-59",
+        "cuber": {
+            "name": "Weissnat",
+            "code": 26
+        },
+        "site": {
+            "name": "Trompton",
+            "code": 18
+        },
+        "allSynced": false,
+        "creationDate": "2020-12-21T05:44:50.133Z",
+        "logsNumber": 212,
+        "lastLogDate": "2020-08-03T18:41:46.425Z"
+    },
+    {
+        "id": 650089,
+        "aac": "45-64-55",
+        "cuber": {
+            "name": "Hane",
+            "code": 67
+        },
+        "site": {
+            "name": "Aliviafurt",
+            "code": 51
+        },
+        "allSynced": false,
+        "creationDate": "2020-10-31T00:47:58.327Z",
+        "logsNumber": 47,
+        "lastLogDate": "2020-05-12T20:21:07.165Z"
+    },
+    {
+        "id": 934388,
+        "aac": "40-8-20",
+        "cuber": {
+            "name": "Flatley",
+            "code": 74
+        },
+        "site": {
+            "name": "South Kaelyn",
+            "code": 87
+        },
+        "allSynced": false,
+        "creationDate": "2020-09-02T05:14:57.522Z",
+        "logsNumber": 67,
+        "lastLogDate": "2020-08-21T03:03:05.544Z"
+    },
+    {
+        "id": 36893,
+        "aac": "45-19-18",
+        "cuber": {
+            "name": "Yost",
+            "code": 80
+        },
+        "site": {
+            "name": "Port Tamaraport",
+            "code": 84
+        },
+        "allSynced": true,
+        "creationDate": "2020-03-26T09:47:01.477Z",
+        "logsNumber": 96,
+        "lastLogDate": "2020-07-18T12:37:55.169Z"
+    },
+    {
+        "id": 351905,
+        "aac": "17-78-94",
+        "cuber": {
+            "name": "Ullrich",
+            "code": 74
+        },
+        "site": {
+            "name": "Port Theodoreland",
+            "code": 75
+        },
+        "allSynced": false,
+        "creationDate": "2020-10-17T10:38:56.403Z",
+        "logsNumber": 37,
+        "lastLogDate": "2020-06-15T22:17:50.926Z"
+    },
+    {
+        "id": 227210,
+        "aac": "8-66-4",
+        "cuber": {
+            "name": "Vandervort",
+            "code": 62
+        },
+        "site": {
+            "name": "Tabithahaven",
+            "code": 8
+        },
+        "allSynced": true,
+        "creationDate": "2020-03-17T01:43:45.389Z",
+        "logsNumber": 250,
+        "lastLogDate": "2020-08-20T21:34:31.811Z"
+    },
+    {
+        "id": 51444,
+        "aac": "74-74-59",
+        "cuber": {
+            "name": "Fisher",
+            "code": 60
+        },
+        "site": {
+            "name": "South Ayla",
+            "code": 89
+        },
+        "allSynced": true,
+        "creationDate": "2020-08-13T16:36:27.756Z",
+        "logsNumber": 25,
+        "lastLogDate": "2020-07-20T11:07:16.507Z"
+    },
+    {
+        "id": 692704,
+        "aac": "47-36-65",
+        "cuber": {
+            "name": "Hayes",
+            "code": 14
+        },
+        "site": {
+            "name": "Lake Ellsworth",
+            "code": 90
+        },
+        "allSynced": true,
+        "creationDate": "2020-08-03T05:52:37.461Z",
+        "logsNumber": 27,
+        "lastLogDate": "2021-01-23T12:54:20.587Z"
+    },
+    {
+        "id": 544262,
+        "aac": "63-55-59",
+        "cuber": {
+            "name": "Gutkowski",
+            "code": 57
+        },
+        "site": {
+            "name": "Rogahnmouth",
+            "code": 7
+        },
+        "allSynced": true,
+        "creationDate": "2020-11-25T03:45:34.512Z",
+        "logsNumber": 205,
+        "lastLogDate": "2020-03-20T16:10:08.382Z"
+    },
+    {
+        "id": 23357,
+        "aac": "49-3-81",
+        "cuber": {
+            "name": "Schiller",
+            "code": 66
+        },
+        "site": {
+            "name": "East Tobin",
+            "code": 41
+        },
+        "allSynced": false,
+        "creationDate": "2020-12-14T07:04:45.343Z",
+        "logsNumber": 198,
+        "lastLogDate": "2020-04-05T10:18:01.106Z"
+    }
+]

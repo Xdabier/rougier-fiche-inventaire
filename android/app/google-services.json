@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "847668276760",
+    "project_id": "barcode-b8035",
+    "storage_bucket": "barcode-b8035.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847668276760:android:4c3aa56c9665657dad9d6d",
+        "android_client_info": {
+          "package_name": "com.forestrougier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847668276760-1oahtjvb83b7q77r4vi1ntipd807tuq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3P6-3Fdo3uOQzKIplTovDySYbWAUgS14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847668276760-1oahtjvb83b7q77r4vi1ntipd807tuq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
