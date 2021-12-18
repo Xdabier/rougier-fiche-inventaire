@@ -147,7 +147,10 @@ const CameraModal: React.FunctionComponent<{
             </SafeAreaView>
             <ModalFooter
                 disabled={!code || !code.length}
-                onPress={() => onClose(code)}
+                onPress={() => {
+                    onClose(code);
+                    setCode('');
+                }}
                 title={translate('common.validate')}
             />
         </Modal>

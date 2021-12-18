@@ -1,7 +1,7 @@
 {
     "common": {
         "home": "Acceuil",
-        "parcPrep": "inventaire",
+        "parcPrep": "Fiches",
         "log": "Billes",
         "settings": "Paramètres",
         "id": "ID",
@@ -9,15 +9,15 @@
         "syncing": "Synchronisation...",
         "logId": "Num bille",
         "syncError": "Erreur de synchronisation, vérifiez peut-être la configuration de votre serveur.",
-        "parcId": "ID Parc",
+        "parcId": "ID fiche",
         "succSync": "Fiche synchronisé avec succès!",
         "succAllSync": "Tous les fiches ont été synchronisés avec succès!",
-        "prepFileId": "ID fiche inventaire {{fileId}}",
+        "prepFileId": "ID fiche {{fileId}}",
         "creationDate": "Créé le {{date}}",
         "lastLogDate": "Dernière bille le {{date}}",
         "logs": "Billes",
         "logsNumber": "{{numLogs}} Billes",
-        "addParcPrepFile": "Ajouter fiche inventaire",
+        "addParcPrepFile": "Ajouter fiche",
         "editParcPrepFile": "Modifier fiche",
         "editLog": "Modifier bille",
         "addLog": "Ajouter bille",
@@ -62,12 +62,12 @@
         "message_code": "Vous voulez fermer sans scanner le code ?"
     },
     "homePage": {
-        "title": "Fiche inventaire actuel"
+        "title": "Fiche actuel"
     },
     "logsListPage": {
-        "title": "Bille de parc",
+        "title": "Billes",
         "filterInputPh": "Commencez à taper l'id...",
-        "noContent": "Aucun bille n'a encore été ajouté."
+        "noContent": "Aucune bille ajoutée ."
     },
     "parcPrep": {
         "noContent": "Vous devez d'abord ajouter les fiches de préparation du parc."
@@ -173,8 +173,8 @@
         },
         "parcPrep": {
             "confirm": "Confirmer l'ajout de fiche",
-            "succMsg": "Fiche inventaire ajouter avec succés!",
-            "succMsgEdit": "Fiche inventaire modifié avec succés!",
+            "succMsg": "Fiche ajouter avec succés!",
+            "succMsgEdit": "Fiche modifié avec succés!",
             "fields": {
                 "id": {
                     "label": "ID de fiche",

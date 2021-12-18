@@ -92,11 +92,6 @@ const LogCard: React.FunctionComponent<{
                 }`}
             </Text>
             <Text style={[info, regularFont, textAlignLeft]}>
-                {`${translate('modals.logs.fields.site.label')}: ${
-                    logItem.siteCode
-                }`}
-            </Text>
-            <Text style={[info, regularFont, textAlignLeft]}>
                 {translate('common.creationDate', {
                     date: new Date(logItem.creationDate).toLocaleDateString()
                 })}

@@ -33,10 +33,10 @@ const syncSingleForm = async (
                 serverData,
                 convertSyncFile(SYNC_DATA)
             );
-
             if (RES) {
                 const DB_RES = await updateSyncParcPrepFile(parcForm?.id, 1);
 
+                console.log('test log = ', DB_RES);
                 if (DB_RES) {
                     eventPub(EventTopicEnum.updateParcPrep);
                     return RES;

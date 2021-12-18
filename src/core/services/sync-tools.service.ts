@@ -36,7 +36,6 @@ export const convertLogsToSyncLogs = (
     logs.map((log: LogInterface) => {
         const ODOO_LOG_BODY: OdooLogsBodyInterface = {
             barcode: log.barCode,
-            emplacement: log.site,
             num_troncon: log.sectionNumber
         };
 
@@ -61,7 +60,8 @@ export const convertSyncFile = (
     name: syncFile.id,
     sync: true,
     aac: syncFile.aac,
-    type: syncFile.type,
+    emplacement: syncFile.site,
+    type: syncFile.type === 'Inventaire' ? 'inventaire' : 'attribution',
     appId: getUniqueId(),
     billes: convertLogsToSyncLogs(syncFile.logs),
     creation_date: convertDate(new Date(syncFile.creationDate)),

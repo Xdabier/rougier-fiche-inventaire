@@ -7,5 +7,6 @@ export interface ParcPrepAllDetailsInterface {
     lastLogId: string | null;
     logsNumber: number;
     id: string;
+    site: string;
     isDefault: 0 | 1;
 }

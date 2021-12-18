@@ -29,11 +29,11 @@ import EventTopicEnum from '../../../core/enum/event-topic.enum';
 import {MainStateContextInterface} from '../../../core/interfaces/main-state.interface';
 import MainStateContext from '../../../core/contexts/main-state.context';
 import {ParcPrepAllDetailsInterface} from '../../../core/interfaces/parc-prep-all-details.interface';
-import CameraModal from '../../../shared/components/camera-modal/camera-modal.component';
 import syncForm from '../../../core/services/sync-logs.service';
 import {requestServerEdit} from '../../../utils/modal.utils';
 import {getLogs} from '../../../core/services/logs.service';
 import {LogDetailsInterface} from '../../../core/interfaces/log.interface';
+import cleanUp from '../../../core/services/cleaning.service';
 
 const {
     appPage,
@@ -76,9 +76,7 @@ const STYLES = StyleSheet.create({
 const HomePage: React.FunctionComponent<HomeScreenProps> = ({
     navigation
 }: any) => {
-    const [barCode, setBarCode] = useState<string>('');
     const [addLogModalShow, setAddLogModalShow] = useState<boolean>(false);
-    const [cameraModalShow, setCameraModalShow] = useState<boolean>(false);
     const [addParcFileModalShow, setAddParcFileModalShow] = useState<boolean>(
         false
     );
@@ -88,7 +86,6 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
     const {
         homeParcPrepFile,
         gasolines,
-        cubers,
         serverData,
         setFilteringId,
         setLogs,
@@ -135,6 +132,7 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
                         syncForm(file, serverData)
                 );
 
+                await cleanUp();
                 const RES = await Promise.all(SYNC_ALL);
                 eventPub(EventTopicEnum.setSpinner, false);
                 if (!RES.includes(0)) {
@@ -180,36 +178,6 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
                     <View />
                 )}
                 <View style={[vSpacer60]} />
-                <MatButton
-                    onPress={() => setCameraModalShow(true)}
-                    disabled={!homeParcPrepFile}>
-                    <View
-                        style={[
-                            fullWidth,
-                            STYLES.button,
-                            STYLES.buttonSecond,
-                            centerHorizontally,
-                            spaceEvenly
-                        ]}>
-                        <Icon
-                            name="qr-code-scanner"
-                            color="#fff"
-                            size={ICON_SIZE}
-                        />
-                        <View
-                            style={[
-                                STYLES.textView,
-                                textAlignCenter,
-                                centerHorizontally,
-                                justifyAlignCenter
-                            ]}>
-                            <Text style={[STYLES.buttonText, textAlignCenter]}>
-                                {translate('common.scanBarCode')}
-                            </Text>
-                        </View>
-                    </View>
-                </MatButton>
-                <View style={[vSpacer12]} />
                 <MatButton onPress={() => setAddParcFileModalShow(true)}>
                     <View
                         style={[
@@ -267,7 +235,7 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
                         style={[
                             fullWidth,
                             STYLES.button,
-                            STYLES.buttonMain,
+                            STYLES.buttonSecond,
                             centerHorizontally,
                             spaceEvenly
                         ]}>
@@ -288,22 +256,8 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
                 <View style={[vSpacer60]} />
             </ScrollView>
 
-            <CameraModal
-                modalVisible={cameraModalShow}
-                onClose={(code?: string) => {
-                    setCameraModalShow(false);
-
-                    if (code && code.length) {
-                        setBarCode(code);
-                        setAddLogModalShow(true);
-                    }
-                }}
-                modalName={translate('common.scanBarCode')}
-            />
-
             <AddLogDetails
                 gasolineList={gasolines}
-                scannedBarCode={barCode}
                 modalVisible={addLogModalShow}
                 onClose={(refresh) => {
                     setAddLogModalShow(false);
@@ -316,7 +270,6 @@ const HomePage: React.FunctionComponent<HomeScreenProps> = ({
 
             <AddParcFileDetails
                 oldFile={oldParc}
-                cubers={cubers}
                 modalVisible={addParcFileModalShow}
                 onClose={(refresh: boolean | undefined) => {
                     setAddParcFileModalShow(false);

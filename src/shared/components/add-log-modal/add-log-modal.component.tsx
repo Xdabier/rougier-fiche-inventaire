@@ -40,7 +40,6 @@ import {insertLog, updateLog} from '../../../core/services/logs.service';
 import CameraModal from '../camera-modal/camera-modal.component';
 import {requestCloseModal} from '../../../utils/modal.utils';
 import ScanInput from '../scan-input/scan-input.component';
-import {SiteInterface} from '../../../core/interfaces/site.interface';
 
 const {
     fullWidth,
@@ -91,16 +90,10 @@ const AddLogDetails: React.FunctionComponent<{
     onClose: (refresh?: boolean) => void;
     gasolineList: GasolineInterface[];
 }) => {
-    const [cameraModalShow, setCameraModalShow] = useState<
-        'barcode' | 'site' | ''
-    >('');
+    const [cameraModalShow, setCameraModalShow] = useState<boolean>(false);
     const [barCode, setBarCode] = useState<string>(scannedBarCode || '');
     const [, setId] = useState<string>('');
     const [sectionNumber, setSectionNumber] = useState<string>('');
-    const [site, setSite] = useState<SiteInterface>({
-        code: '',
-        name: ''
-    });
 
     const {defaultParc, keyboardHeight} = useContext<MainStateContextInterface>(
         MainStateContext
@@ -134,21 +127,15 @@ const AddLogDetails: React.FunctionComponent<{
         sectionNumber.length >= 1;
 
     const confirmInsertion = () => {
-        if (
-            validForm() &&
-            site &&
-            defaultParc &&
-            Object.keys(defaultParc).length
-        ) {
+        if (validForm() && defaultParc && Object.keys(defaultParc).length) {
             const EL: LogInterface = {
-                barcode: barCode,
+                barCode,
                 creationDate: new Date().toISOString(),
                 parcPrepId:
                     parcPrepFileId && parcPrepFileId.length
                         ? parcPrepFileId
                         : defaultParc.parcId,
-                sectionNumber,
-                site: site.code
+                sectionNumber
             };
 
             if (oldLog) {
@@ -257,7 +244,7 @@ const AddLogDetails: React.FunctionComponent<{
                         onChangeText={setBarCode}
                         keyboardType="number-pad"
                         value={barCode}
-                        showCodeScanner={() => setCameraModalShow('barcode')}
+                        showCodeScanner={() => setCameraModalShow(true)}
                         required
                     />
                     <FormInput
@@ -269,20 +256,6 @@ const AddLogDetails: React.FunctionComponent<{
                         )}
                         onChangeText={setSectionNumber}
                         value={sectionNumber}
-                        required
-                    />
-                    <ScanInput
-                        title={translate('modals.logs.fields.site.label')}
-                        placeholder={translate('modals.logs.fields.site.ph')}
-                        onChangeText={(value) => {
-                            setSite({
-                                name: '',
-                                code: value
-                            });
-                        }}
-                        keyboardType="default"
-                        value={site?.code}
-                        showCodeScanner={() => setCameraModalShow('site')}
                         required
                     />
                     <View style={[vSpacer100]} />
@@ -311,20 +284,13 @@ const AddLogDetails: React.FunctionComponent<{
             </ActionSheetComponent>
 
             <CameraModal
-                modalVisible={!!cameraModalShow}
+                modalVisible={cameraModalShow}
                 onClose={(code?: string) => {
                     if (code && code.length) {
-                        if (cameraModalShow === 'barcode') {
-                            setBarCode(code);
-                        } else {
-                            setSite({
-                                code,
-                                name: ''
-                            });
-                        }
+                        setBarCode(code);
                     }
 
-                    setCameraModalShow('');
+                    setCameraModalShow(false);
                 }}
                 modalName={translate('common.scanBarCode')}
             />

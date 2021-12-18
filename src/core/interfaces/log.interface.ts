@@ -3,7 +3,6 @@ export interface LogInterface {
     creationDate?: string;
     barCode: string;
     id?: string;
-    site: string;
     sectionNumber: string;
 }
 
@@ -12,7 +11,5 @@ export interface LogDetailsInterface {
     creationDate: string;
     barcode: string;
     id: string;
-    siteName?: string;
-    siteCode?: string;
     sectionNumber?: string;
 }

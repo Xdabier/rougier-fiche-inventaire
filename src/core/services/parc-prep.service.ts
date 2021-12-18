@@ -25,7 +25,7 @@ export const getParcPrepFilesIds = async (close = false): Promise<string[]> => {
                 console.error('err parc_prep = ', reason);
             });
         }
-        return RES.rows.raw().map((v: {id: number}) => `${v.id}`) as string[];
+        return RES.rows.raw().map((v: {id: string}) => `${v.id}`) as string[];
     } catch (e) {
         return Promise.reject(e);
     }
@@ -86,7 +86,7 @@ export const getRawParcPrepFileById = async (
 ): Promise<ParcPrepInterface[]> => {
     try {
         const RES: ResultSet = await SQLiteService.executeQuery(
-            `SELECT pp.id, pp.aac, pp.creationDate, pp.type
+            `SELECT pp.id, pp.aac, pp.creationDate, pp.type, pp.site
                         FROM parc_prep AS pp WHERE pp.id = ?;`,
             [id]
         );
@@ -107,7 +107,7 @@ export const getParcPrepFileById = async (
 ): Promise<ParcPrepAllDetailsInterface[]> => {
     try {
         const RES: ResultSet = await SQLiteService.executeQuery(
-            `SELECT pp.id, pp.aac, pp.creationDate, pp.type,
+            `SELECT pp.id, pp.aac, pp.creationDate, pp.type, pp.site, pp.allSynced,
             ps.lastLogDate, ps.lastLogId, ps.logsNumber,
             ps.isDefault FROM parc_prep AS pp INNER JOIN parcPrepStats AS ps ON ps.parcPrepId = pp.id WHERE pp.id = ?;`,
             [id]
@@ -128,7 +128,7 @@ export const getParcPrepFiles = async (
 ): Promise<ParcPrepAllDetailsInterface[]> => {
     try {
         const RES: ResultSet = await SQLiteService.executeQuery(
-            `SELECT pp.id, pp.aac, pp.type, pp.creationDate, pp.allSynced,
+            `SELECT pp.id, pp.aac, pp.type, pp.creationDate, pp.allSynced, pp.site,
             ps.lastLogDate, ps.lastLogId, ps.logsNumber,
             ps.isDefault FROM parc_prep AS pp INNER JOIN parcPrepStats AS ps ON ps.parcPrepId = pp.id;`
         );

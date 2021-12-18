@@ -28,7 +28,8 @@ const {
     info,
     title,
     subTitle,
-    hSpacer5
+    hSpacer5,
+    justifyAlignTopHorizontal
 } = CommonStyles;
 
 const STYLES = StyleSheet.create({
@@ -75,8 +76,13 @@ const STYLES = StyleSheet.create({
         backgroundColor: 'rgba(69, 96, 14, .3)'
     },
     defCardIdx: {
-        fontSize: 10,
+        fontSize: 10
+    },
+    defCardTextColor: {
         color: MAIN_GREEN
+    },
+    syncCapsuleTextColor: {
+        color: '#fff'
     }
 });
 
@@ -99,98 +105,35 @@ const ParcPrepCard: React.FunctionComponent<{
     <View
         style={[
             STYLES.mainView,
-            centerHorizontally,
-            spaceBetween,
-            alignCenter,
+            centerVertically,
+            justifyAlignTopHorizontal,
             rougierShadow
         ]}>
-        <View
-            style={[
-                STYLES.firstHalfOfCard,
-                centerVertically,
-                justifyAlignLeftVertical,
-                justifyCenter
-            ]}>
-            <Text style={[mainColor, title, regularFont, textAlignLeft]}>
-                {translate('common.id')}{' '}
-                <Text style={[mainColor, subTitle, regularFont, textAlignLeft]}>
-                    {parcPrepFile.id}
-                </Text>
-                <View style={[hSpacer5]} />
-                {parcPrepFile.isDefault ? (
+        <Text style={[mainColor, title, regularFont, textAlignLeft]}>
+            {translate('common.id')}{' '}
+            <Text style={[mainColor, subTitle, regularFont, textAlignLeft]}>
+                {parcPrepFile.id}
+            </Text>
+            {parcPrepFile.isDefault ? (
+                <>
+                    <View style={[hSpacer5]} />
                     <View style={[STYLES.defCardCapsule]}>
-                        <Text style={[STYLES.defCardIdx]}>
+                        <Text
+                            style={[
+                                STYLES.defCardIdx,
+                                STYLES.defCardTextColor
+                            ]}>
                             {translate('common.default')}
                         </Text>
                     </View>
-                ) : (
-                    <View />
-                )}
-            </Text>
-            <Text style={[info, regularFont, textAlignLeft]}>
-                {`${translate('modals.parcPrep.fields.aac.label')}: ${
-                    parcPrepFile.aac
-                }`}
-            </Text>
-            <Text style={[info, regularFont, textAlignLeft]}>
-                {`${translate('modals.parcPrep.fields.type.label')}: ${
-                    parcPrepFile.type
-                }`}
-            </Text>
-            <Text style={[info, regularFont, textAlignLeft]}>
-                {translate('common.creationDate', {
-                    date: new Date(
-                        parcPrepFile.creationDate
-                    ).toLocaleDateString()
-                })}
-            </Text>
-            {parcPrepFile.lastLogDate ? (
-                <Text style={[info, regularFont, textAlignLeft]}>
-                    {translate('common.lastLogDate', {
-                        date: new Date(
-                            parcPrepFile.lastLogDate
-                        ).toLocaleDateString()
-                    })}
-                </Text>
+                </>
             ) : (
                 <View />
             )}
-            {parcPrepFile.logsNumber ? (
-                <MatButton
-                    onPress={() => {
-                        if (goToLogs) {
-                            goToLogs(parcPrepFile.id);
-                        }
-                    }}>
-                    <Text
-                        style={[mainColor, title, regularFont, textAlignLeft]}>
-                        {translate('common.logs')}{' '}
-                        <Text
-                            style={[
-                                mainColor,
-                                subTitle,
-                                regularFont,
-                                textAlignLeft
-                            ]}>
-                            {translate('common.logsNumber', {
-                                numLogs: parcPrepFile.logsNumber
-                            })}
-                        </Text>
-                    </Text>
-                </MatButton>
-            ) : (
-                <View />
-            )}
-        </View>
-        <View
-            style={[
-                centerVertically,
-                justifyAlignRightVertical,
-                justifyCenter
-            ]}>
+            <View style={[hSpacer5]} />
             <View
                 style={[
-                    STYLES.button,
+                    STYLES.defCardCapsule,
                     parcPrepFile.allSynced
                         ? STYLES.buttonFillConfirmed
                         : STYLES.buttonFill,
@@ -200,42 +143,129 @@ const ParcPrepCard: React.FunctionComponent<{
                 <Icon
                     name={parcPrepFile.allSynced ? 'check' : 'sync'}
                     color="#fff"
-                    size={20}
+                    size={12}
                 />
-                <Text style={[STYLES.buttonText, STYLES.buttonTextFill]}>
+                <Text style={[STYLES.defCardIdx, STYLES.syncCapsuleTextColor]}>
                     {translate(
                         `common.${parcPrepFile.allSynced ? 'synced' : 'sync'}`
                     )}
                 </Text>
             </View>
-            <MatButton onPress={editParc}>
-                <View
-                    style={[
-                        STYLES.button,
-                        STYLES.buttonClear,
-                        centerHorizontally,
-                        justifyAlignRightHorizontal
-                    ]}>
-                    <Icon name="edit" color={MAIN_RED} size={20} />
-                    <Text style={[STYLES.buttonText, STYLES.buttonTextClear]}>
-                        {translate('common.editParcPrepFile')}
+        </Text>
+        <View style={[centerHorizontally, spaceBetween, alignCenter]}>
+            <View
+                style={[
+                    STYLES.firstHalfOfCard,
+                    centerVertically,
+                    justifyAlignLeftVertical,
+                    justifyCenter
+                ]}>
+                <Text style={[info, regularFont, textAlignLeft]}>
+                    {`${translate('modals.parcPrep.fields.aac.label')}: ${
+                        parcPrepFile.aac
+                    }`}
+                </Text>
+                <Text style={[info, regularFont, textAlignLeft]}>
+                    {`${translate('modals.parcPrep.fields.type.label')}: ${
+                        parcPrepFile.type
+                    }`}
+                </Text>
+                <Text style={[info, regularFont, textAlignLeft]}>
+                    {translate('common.creationDate', {
+                        date: new Date(
+                            parcPrepFile.creationDate
+                        ).toLocaleDateString()
+                    })}
+                </Text>
+                {parcPrepFile.site ? (
+                    <Text style={[info, regularFont, textAlignLeft]}>
+                        {`${translate('modals.logs.fields.site.label')}: ${
+                            parcPrepFile.site
+                        }`}
                     </Text>
-                </View>
-            </MatButton>
-            <MatButton onPress={onAddLog}>
-                <View
-                    style={[
-                        STYLES.button,
-                        STYLES.buttonClear,
-                        centerHorizontally,
-                        justifyAlignRightHorizontal
-                    ]}>
-                    <Icon name="add" color={MAIN_RED} size={20} />
-                    <Text style={[STYLES.buttonText, STYLES.buttonTextClear]}>
-                        {translate('common.addLog')}
+                ) : (
+                    <View />
+                )}
+                {parcPrepFile.lastLogDate ? (
+                    <Text style={[info, regularFont, textAlignLeft]}>
+                        {translate('common.lastLogDate', {
+                            date: new Date(
+                                parcPrepFile.lastLogDate
+                            ).toLocaleDateString()
+                        })}
                     </Text>
-                </View>
-            </MatButton>
+                ) : (
+                    <View />
+                )}
+                {parcPrepFile.logsNumber ? (
+                    <MatButton
+                        onPress={() => {
+                            if (goToLogs) {
+                                goToLogs(parcPrepFile.id);
+                            }
+                        }}>
+                        <Text
+                            style={[
+                                mainColor,
+                                title,
+                                regularFont,
+                                textAlignLeft
+                            ]}>
+                            {translate('common.logs')}{' '}
+                            <Text
+                                style={[
+                                    mainColor,
+                                    subTitle,
+                                    regularFont,
+                                    textAlignLeft
+                                ]}>
+                                {translate('common.logsNumber', {
+                                    numLogs: parcPrepFile.logsNumber
+                                })}
+                            </Text>
+                        </Text>
+                    </MatButton>
+                ) : (
+                    <View />
+                )}
+            </View>
+            <View
+                style={[
+                    centerVertically,
+                    justifyAlignRightVertical,
+                    justifyCenter
+                ]}>
+                <MatButton onPress={editParc}>
+                    <View
+                        style={[
+                            STYLES.button,
+                            STYLES.buttonClear,
+                            centerHorizontally,
+                            justifyAlignRightHorizontal
+                        ]}>
+                        <Icon name="edit" color={MAIN_RED} size={20} />
+                        <Text
+                            style={[STYLES.buttonText, STYLES.buttonTextClear]}>
+                            {translate('common.editParcPrepFile')}
+                        </Text>
+                    </View>
+                </MatButton>
+                <MatButton onPress={onAddLog}>
+                    <View
+                        style={[
+                            STYLES.button,
+                            STYLES.buttonClear,
+                            centerHorizontally,
+                            justifyAlignRightHorizontal
+                        ]}>
+                        <Icon name="add" color={MAIN_RED} size={20} />
+                        <Text
+                            style={[STYLES.buttonText, STYLES.buttonTextClear]}>
+                            {translate('common.addLog')}
+                        </Text>
+                    </View>
+                </MatButton>
+            </View>
         </View>
     </View>
 );

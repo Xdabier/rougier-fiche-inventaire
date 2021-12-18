@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'ficheInventaire' do
+target 'Stock' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'ficheInventaireTests' do
+  target 'StockTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'ficheInventaire' do
   end
 end
 
-target 'ficheInventaire-tvOS' do
-  # Pods for ficheInventaire-tvOS
+target 'Stock-tvOS' do
+  # Pods for Stock-tvOS
 
-  target 'ficheInventaire-tvOSTests' do
+  target 'Stock-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

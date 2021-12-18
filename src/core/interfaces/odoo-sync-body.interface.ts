@@ -3,12 +3,12 @@ interface OdooParcPrepBodyInterface {
     type: string;
     creation_date: string;
     name: string;
+    emplacement: string;
 }
 
 export interface OdooLogsBodyInterface {
     barcode: string;
     num_troncon: string;
-    emplacement: string;
 }
 
 export interface OdooSyncBodyInterface extends OdooParcPrepBodyInterface {

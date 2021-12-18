@@ -40,6 +40,8 @@ import {ParcPrepAllDetailsInterface} from '../../../core/interfaces/parc-prep-al
 import {requestCloseModal} from '../../../utils/modal.utils';
 import {MainStateContextInterface} from '../../../core/interfaces/main-state.interface';
 import MainStateContext from '../../../core/contexts/main-state.context';
+import ScanInput from '../scan-input/scan-input.component';
+import CameraModal from '../camera-modal/camera-modal.component';
 
 const TYPES = ['Attribution code a barre', 'Inventaire'];
 
@@ -83,6 +85,7 @@ const AddParcFileDetails: React.FunctionComponent<{
     onClose: (refresh?: boolean) => void;
     oldFile?: ParcPrepAllDetailsInterface | null;
 }) => {
+    const [cameraModalShow, setCameraModalShow] = useState<boolean>(false);
     const [id, setId] = useState<string>('');
     const [idValid, setIdValid] = useState<boolean | boolean[]>(true);
     const [aac, setAac] = useState<string>('');
@@ -90,6 +93,7 @@ const AddParcFileDetails: React.FunctionComponent<{
     const [aacValid, setAacValid] = useState<boolean | boolean[]>(true);
     const [date, setDate] = useState<Date>(new Date());
     const [defaultParc, setDefaultParc] = useState<boolean>(true);
+    const [site, setSite] = useState<string>('');
 
     const [selectedList, setSelectedList] = useState<'type' | 'none'>('none');
 
@@ -114,6 +118,7 @@ const AddParcFileDetails: React.FunctionComponent<{
         setAac('');
         setDate(new Date());
         setType('');
+        setSite('');
     };
 
     useEffect(() => {
@@ -140,6 +145,7 @@ const AddParcFileDetails: React.FunctionComponent<{
                 creationDate: date.toISOString(),
                 aac,
                 type,
+                site,
                 defaultParcFile: defaultParc ? 1 : 0
             };
 
@@ -269,6 +275,13 @@ const AddParcFileDetails: React.FunctionComponent<{
                         onValidation={setAacValid}
                         required
                     />
+                    <DateInput
+                        title={translate('modals.parcPrep.fields.date.label')}
+                        value={date}
+                        onDateChange={(newDate: Date) => {
+                            setDate(newDate);
+                        }}
+                    />
                     <SelectInput
                         title={translate('modals.parcPrep.fields.type.label')}
                         placeholder={translate(
@@ -280,13 +293,21 @@ const AddParcFileDetails: React.FunctionComponent<{
                         value={type}
                         required
                     />
-                    <DateInput
-                        title={translate('modals.parcPrep.fields.date.label')}
-                        value={date}
-                        onDateChange={(newDate: Date) => {
-                            setDate(newDate);
-                        }}
-                    />
+                    {type === 'Inventaire' && (
+                        <ScanInput
+                            title={translate('modals.logs.fields.site.label')}
+                            placeholder={translate(
+                                'modals.logs.fields.site.ph'
+                            )}
+                            onChangeText={(text) => {
+                                setSite(text);
+                            }}
+                            keyboardType="default"
+                            value={site}
+                            showCodeScanner={() => setCameraModalShow(true)}
+                            required
+                        />
+                    )}
                     <View style={[vSpacer25]} />
                     <FormCheckbox
                         value={defaultParc}
@@ -318,6 +339,18 @@ const AddParcFileDetails: React.FunctionComponent<{
                     renderElement={renderFilterBtn}
                 />
             </ActionSheetComponent>
+
+            <CameraModal
+                modalVisible={cameraModalShow}
+                onClose={(code?: string) => {
+                    if (code && code.length) {
+                        setSite(code);
+                    }
+
+                    setCameraModalShow(false);
+                }}
+                modalName={translate('common.scanBarCode')}
+            />
         </Modal>
     );
 };

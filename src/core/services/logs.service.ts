@@ -17,7 +17,7 @@ export const getLogs = async (
     try {
         const RES: ResultSet = await SQLiteService.executeQuery(
             `SELECT l.parcPrepId, l.creationDate, l.barcode,
-            l.sectionNumber, l.id, l.site as siteCode FROM log AS l WHERE l.parcPrepId = ?;`,
+            l.sectionNumber, l.id FROM log AS l WHERE l.parcPrepId = ?;`,
             [parcId]
         );
         if (close && !SQLiteService.finished) {
@@ -37,7 +37,7 @@ export const getRawLogs = async (
 ): Promise<LogInterface[]> => {
     try {
         const RES: ResultSet = await SQLiteService.executeQuery(
-            `SELECT l.barcode, l.sectionNumber, l.id, l.site FROM log AS l
+            `SELECT l.barcode, l.sectionNumber, l.id FROM log AS l
             WHERE l.parcPrepId = ?;`,
             [parcId]
         );
