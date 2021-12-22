@@ -1,5 +1,4 @@
 import I18n, {TranslateOptions} from 'i18n-js';
-import {findBestAvailableLanguage} from 'react-native-localize';
 import memoize from 'lodash.memoize';
 import syncStorage from '../core/services/sync-storage.service';
 import CURRENT_LANGUAGE from '../core/constants/storage-keys.constant';
